@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Лена Остапенко](https://up.htmlacademy.ru/adaptive/15/user/407663).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Кузьмичёв](https://up.htmlacademy.ru/adaptive/15/user/342395).
 
 ---
 
