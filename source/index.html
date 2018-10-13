@@ -7,24 +7,24 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li><a class="site-list__item">Главная</a></li>
-          <li><a class="site-list__item" href="photo.html">Фото и видео</a></li>
-          <li><a class="site-list__item" href="form.html">Форма отзыва</a></li>
-          <li><a class="site-list__item" href="#">HTML Academy</a></li>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="City of Sedona">
       </a>
+    </header>
+
+    <main class="page-main">
       <div class="intro-main">
         <img class="intro-main__background-image" src="http://placehold.it/320x389" width="320" height="389" alt="Sedona">
         <img class="intro-main__text" src="http://placehold.it/282x214" width="282" height="214" alt="Welcome to Sedona">
       </div>
-    </header>
-
-    <main class="page-main">
       <h1 class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <section class="reasons">
         <h2 class="reasons__header">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
@@ -34,7 +34,7 @@
             <p class="reasons__item-number">— №1 —</p>
             <p class="reasons__item-desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
             <img class="reasons__image" src="http://placehold.it/320x260" width="320" height="260" alt="Life in Sedona">
-            <section class="features">
+            <div class="features">
               <div class="features__wrapper">
                 <h2 class="visually-hidden">Особенности</h2>
                 <ul class="features__list">
@@ -52,7 +52,7 @@
                   </li>
                 </ul>
               </div>
-            </section>
+            </div>
           </li>
           <li class="reasons__item">
             <h3 class="reasons__item-header">Там есть Мост дьявола</h3>
@@ -84,9 +84,9 @@
         <a class="find-hotel__button button" href="#">Найти гостиницу</a>
       </section>
 
-      <section class="map">
+      <div class="map">
         <img class="map__image" src="http://placehold.it/320x350" width="320" height="350" alt="Map of Arizona">
-      </section>
+      </div>
 
 
     </main>

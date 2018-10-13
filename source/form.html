@@ -7,11 +7,11 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li><a class="site-list__item">Главная</a></li>
-          <li><a class="site-list__item" href="photo.html">Фото и видео</a></li>
-          <li><a class="site-list__item" href="form.html">Форма отзыва</a></li>
-          <li><a class="site-list__item" href="#">HTML Academy</a></li>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
@@ -26,60 +26,62 @@
 
     <main class="page-main">
       <h1 class="main-title">Оставьте свой отзыв</h1>
-      <p class="subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</h2>
+      <p class="subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
       <form class="review" method="post" name="review" action="https://echo.htmlacademy.ru">
-        <section class="review__section">
-          <h2 class="review__header">Представьтесь:</h2>
+        <fieldset class="review__section">
+          <legend class="review__header">Представьтесь:</legend>
           <p>
-            <label class="review__label review__label--name" for="first-name">Имя*:</label>
-            <input class="review__input review__input--name" id="first-name" name="first-name" type="text" value="" placeholder="Петр">
+            <label class="review__label" for="first-name">Имя*:</label>
+            <input class="review__input" id="first-name" name="first-name" type="text" value="" placeholder="Петр">
           </p>
           <p>
-            <label class="review__label review__label--name" for="last-name">Фамилия*:</label>
-            <input class="review__input review__input--name" id="last-name" name="last-name" type="text" value="" placeholder="Иванов">
+            <label class="review__label" for="last-name">Фамилия*:</label>
+            <input class="review__input" id="last-name" name="last-name" type="text" value="" placeholder="Иванов">
           </p>
           <p>
-            <label class="review__label review__label--name" for="second-name">Отчество:</label>
-            <input class="review__input review__input--name" id="second-name" name="second-name" type="text" value="" placeholder="Александрович">
+            <label class="review__label" for="second-name">Отчество:</label>
+            <input class="review__input" id="second-name" name="second-name" type="text" value="" placeholder="Александрович">
           </p>
-        </section>
+        </fieldset>
 
-        <section class="review__section">
-          <h2 class="review__header">Контактная информация:</h2>
+        <fieldset class="review__section">
+          <legend class="review__header">Контактная информация:</legend>
           <p>
             <label class="review__label review__label--contact" for="phone">Контактный телефон*:</label>
             <input class="review__input review__input--contact" id="phone" name="phone" type="text" value="" placeholder="Введите телефон">
+            <img class="review__image review__image--phone" src="http://placehold.it/58x58" width="58" height="58" alt="Телефон">
           </p>
           <p>
-            <label class="review__label review__label--email" for="email">Электронная почта*:</label>
-            <input class="review__input review__input--email" id="email" name="email" type="text" value="" placeholder="Введите e-mail">
+            <label class="review__label review__label--contact" for="email">Электронная почта*:</label>
+            <input class="review__input review__input--contact" id="email" name="email" type="text" value="" placeholder="Введите e-mail">
+            <img class="review__image review__image--email" src="http://placehold.it/58x58" width="58" height="58" alt="E-mail">
           </p>
-        </section>
+        </fieldset>
 
-        <section class="review__section">
-          <h2 class="review__header">Ваше общее впечатление:</h2>
+        <fieldset class="review__section">
+          <legend class="review__header">Ваше общее впечатление:</legend>
           <div class="review__radio-block">
-            <input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label>
-            <input id="negative" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label>
-            <input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label>
+            <input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label" for="positive">Скорее положительное</label>
+            <input id="negative" type="radio" name="impression" value="negative"> <label class="review__label" for="negative">Скорее отрицательное</label>
+            <input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label" for="nothing">Затрудняюсь ответить</label>
           </div>
-        </section>
+        </fieldset>
 
-        <section class="review__section">
-          <h2 class="review__header">Посещенные достопримечательности:</h2>
+        <fieldset class="review__section">
+          <legend class="review__header">Посещенные достопримечательности:</legend>
           <div class="review__checkbox-block">
             <input id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label>
             <input id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label>
             <input id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label>
             <input id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label>
           </div>
-        </section>
+        </fieldset>
 
-        <section class="review__section">
-          <h2 class="review__header">Опишите свои эмоции:</h2>
+        <fieldset class="review__section">
+          <legend class="review__header">Опишите свои эмоции:</legend>
           <textarea class="review__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-        </section>
+        </fieldset>
 
         <button class="review-button button">Отправить отзыв</button>
       </form>
