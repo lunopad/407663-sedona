@@ -3,34 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a><button class="main-nav__toggle main-nav__toggle--cross">Закрыть меню</button></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="City of Sedona">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
       </a>
       <div class="intro-inner">
-        <img class="intro-inner__background-image" src="img/back-short-mobile.jpg" width="320" height="158" alt="Sedona">
-        <img class="intro-inner__text" src="img/text-short-index.svg" width="229" height="39" alt="Sedona">
+        <img class="intro-inner__background-image" src="img/bg-back-mobile@1x.jpg" width="320" height="158" alt="Sedona">
+        <img class="intro-inner__text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </div>
     </header>
 
     <main class="page-main">
       <h1 class="main-title">Оставьте свой отзыв</h1>
-      <p class="subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <p class="main-title__desc">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
       <form class="review" method="post" name="review" action="https://echo.htmlacademy.ru">
-        <fieldset class="review__section">
-          <legend class="review__header">Представьтесь:</legend>
+        <div class="review__section">
+          <h2 class="review__header">Представьтесь:</h2>
           <p>
             <label class="review__label" for="first-name">Имя*:</label>
             <input class="review__input" id="first-name" name="first-name" type="text" value="" placeholder="Петр">
@@ -43,45 +45,45 @@
             <label class="review__label" for="second-name">Отчество:</label>
             <input class="review__input" id="second-name" name="second-name" type="text" value="" placeholder="Александрович">
           </p>
-        </fieldset>
+        </div>
 
-        <fieldset class="review__section">
-          <legend class="review__header">Контактная информация:</legend>
+        <div class="review__section review__section--contact">
+          <h2 class="review__header review__header--contact">Контактная информация:</h2>
+          <label class="review__label review__label--contact" for="phone">Контактный телефон*:</label>
           <p>
-            <label class="review__label review__label--contact" for="phone">Контактный телефон*:</label>
             <input class="review__input review__input--contact" id="phone" name="phone" type="text" value="" placeholder="Введите телефон">
-            <img class="review__image review__image--phone" src="http://placehold.it/58x58" width="58" height="58" alt="Телефон">
+            <span class="review__image-wrap"><img class="review__image" src="img/icon-phone.svg" width="20" height="20" alt="Телефон"></span>
           </p>
+          <label class="review__label review__label--contact" for="email">Электронная почта*:</label>
           <p>
-            <label class="review__label review__label--contact" for="email">Электронная почта*:</label>
             <input class="review__input review__input--contact" id="email" name="email" type="text" value="" placeholder="Введите e-mail">
-            <img class="review__image review__image--email" src="http://placehold.it/58x58" width="58" height="58" alt="E-mail">
+            <span class="review__image-wrap"><img class="review__image" src="img/icon-mail.svg" width="20" height="20" alt="E-mail"></span>
           </p>
-        </fieldset>
+        </div>
 
-        <fieldset class="review__section">
-          <legend class="review__header">Ваше общее впечатление:</legend>
+        <div class="review__section review__section--impression">
+          <h2 class="review__header review__header--impression">Ваше общее впечатление:</h2>
           <div class="review__radio-block">
-            <input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label" for="positive">Скорее положительное</label>
-            <input id="negative" type="radio" name="impression" value="negative"> <label class="review__label" for="negative">Скорее отрицательное</label>
-            <input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label" for="nothing">Затрудняюсь ответить</label>
+            <p><input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label></p>
+            <p><input id="negative" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label></p>
+            <p><input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label></p>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="review__section">
-          <legend class="review__header">Посещенные достопримечательности:</legend>
+        <div class="review__section">
+          <h2 class="review__header review__header--sites">Посещенные достопримечательности:</h2>
           <div class="review__checkbox-block">
-            <input id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label>
-            <input id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label>
-            <input id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label>
-            <input id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label>
+            <p><input id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label></p>
+            <p><input id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label></p>
+            <p><input id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label></p>
+            <p><input id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label></p>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="review__section">
-          <legend class="review__header">Опишите свои эмоции:</legend>
+        <div class="review__section">
+          <h2 class="review__header review__header--emotions">Опишите свои эмоции:</h2>
           <textarea class="review__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-        </fieldset>
+        </div>
 
         <button class="review-button button">Отправить отзыв</button>
       </form>
@@ -104,8 +106,8 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
