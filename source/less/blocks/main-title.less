@@ -1,4 +1,6 @@
 .main-title {
+  max-width: 280px;
+  margin: auto;
   margin-top: 44px;
   margin-bottom: 34px;
   font-weight: bold;
@@ -17,4 +19,11 @@
 
 .main-title__desc--photo {
   padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-title {
+    max-width: none;
+    font-size: 21px;
+  }
 }
