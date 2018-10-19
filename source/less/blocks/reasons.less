@@ -1,0 +1,153 @@
+.reasons__header {
+  max-width: 280px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: normal;
+}
+
+.reasons__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reasons__item {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.reasons__item--blue {
+  padding-top: 42px;
+  background-color: @color-blue;
+  color: #ffffff;
+}
+
+.reasons__item--blue:first-child {
+  padding-top: 60px;
+}
+
+.reasons__item--white {
+  background: #eeeeee;
+  padding-top: 30px;
+}
+
+.reasons__item:last-child {
+  border: 0;
+}
+
+.reasons__item-header {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.reasons__item-number {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
+
+.reasons__item--white .reasons__item-number {
+  color: #333333;
+}
+
+.reasons__item-desc {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+
+.reasons__item--white .reasons__item-desc {
+  margin: 0 20px;
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 30px;
+  color: #333333;
+}
+
+.reasons__item--white:last-child .reasons__item-desc {
+  border: 0;
+}
+
+.reasons__image {
+  margin-top: 42px;
+  vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons__header {
+    max-width: none;
+  }
+
+  .reasons__item-header {
+    padding-top: 47px;
+    font-size: 21px;
+  }
+
+  .reasons__item--blue {
+    padding-top: 0;
+  }
+
+  .reasons__item--white {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .reasons__item--blue:first-child {
+    padding-top: 0;
+  }
+
+  .reasons__image {
+    margin-top: 0;
+  }
+
+  .reasons__image-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reasons__image-desc {
+    box-sizing: border-box;
+    width: 256px;
+    padding: 0 47px;
+  }
+
+  .reasons__image-desc--bridge {
+    order: 2;
+  }
+
+  .reasons__items-block {
+    display: flex;
+    justify-content: space-between;
+    background: #eeeeee;
+  }
+
+  .reasons__item--white .reasons__item-desc {
+    border: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reasons__item-header {
+    margin-left: 58px;
+    margin-right: 58px;
+  }
+
+  .reasons__item-header--bridge {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .reasons__image-desc {
+    width: 400px;
+    padding: 0 67px;
+  }
+
+  .reasons__image-desc--bridge {
+    padding: 0 92px;
+  }
+}

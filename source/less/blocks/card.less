@@ -1,0 +1,90 @@
+.card {
+  border-top: 1px solid #e5e5e5;
+}
+
+.card__wrapper {
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 21px;
+}
+
+.card__image {
+  display: block;
+  margin: auto;
+}
+
+.card__desc {
+  width: 280px;
+  margin: auto;
+}
+
+.card__caption {
+  display: block;
+  padding-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.card__copyright {
+  display: block;
+  padding-top: 6px;
+  text-align: left;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.card__likes {
+  padding-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    width: 50%;
+    border: 0;
+  }
+
+  .card__desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 20px;
+    background: #f2f2f2;
+  }
+
+  .card:first-child {
+    width: 100%;
+  }
+
+  .card__copyright {
+    width: 100%;
+    order: 2;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+
+  .card__likes {
+    padding-top: 28px;
+    margin-right: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    width: auto;
+  }
+
+  .card__desc {
+    margin-top: -80px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+}

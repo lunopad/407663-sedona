@@ -5,6 +5,7 @@
 }
 
 .features__list {
+  margin: 0;
   list-style-type: none;
   padding-top: 26px;
   padding-left: 0;
@@ -22,4 +23,18 @@
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+  }
+
+  .features__item--food {
+    order: 2;
+  }
+
+  .features__item--souvenirs {
+    order: 3;
+  }
 }
