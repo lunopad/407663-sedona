@@ -14,6 +14,7 @@
 .main-nav__item {
   background-color: @color-blue;
   overflow: auto;
+
 }
 
 .main-nav__link {
@@ -31,27 +32,87 @@
   margin: 0;
 }
 
-.main-nav__logo {
-  background-color: transparent;
-}
-
 .main-nav__toggle {
-  display: inline-block;
-  border: 0;
-  width: 55px;
-  height: 55px;
-  padding: 0;
-  background: url("../img/icon-menu.svg") center no-repeat;
-  font-size: 0;
-  vertical-align: bottom;
   position: absolute;
+  top: 0;
   right: 0;
-  top: 223px;
+  z-index: 2;
+  display: block;
+  width: 63px;
+  height: 56px;
+  border: 0;
+  padding: 0;
+  background: transparent;
 }
 
-.main-nav__toggle--cross {
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 20px;
+
+  width: 23px;
+  height: 4px;
+
+  background-color: @color-blue;
+  box-shadow: 0 9px 0 0 @color-blue, 0 18px 0 0 @color-blue;
+}
+
+.main-nav--opened .main-nav__toggle {
   top: 0;
-  background: url("../img/icon-cross.svg") center no-repeat;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    right: 17px;
+
+    width: 27px;
+    height: 4px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__logo {
+  background: transparent;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+     display: none;
+   }
+
+   .main-nav--nojs .main-nav__toggle {
+     display: none;
+   }
+
+   .main-nav__item {
+     &:hover {
+       background-color: #669ec0;
+     }
+     &:active {
+       background-color: #5496bd;
+     }
+   }
+
+   .main-nav__link {
+     &:active {
+       color: #94b9d2;
+     }
+   }
 }
 
 @media (min-width: @tablet-width) {
@@ -62,6 +123,7 @@
 
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 
@@ -92,6 +154,24 @@
   .main-nav__link {
     color: #000000;
     box-shadow: none;
+
+    &:hover {
+      color: #81b3d2;
+    }
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .main-nav__link--active {
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
   }
 
   .main-nav__toggle {

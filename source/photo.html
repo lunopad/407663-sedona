@@ -10,11 +10,11 @@
   <body>
     <div class="site-wrapper">
       <header class="page-header">
-        <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--cross">Закрыть меню</button>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link">Фото и видео</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Фото и видео</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
             <li class="main-nav__logo">
@@ -23,7 +23,6 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
         </nav>
 
         <div class="intro-inner">
@@ -117,5 +116,21 @@
         </div>
       </footer>
     </div>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
