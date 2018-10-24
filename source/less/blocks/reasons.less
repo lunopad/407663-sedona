@@ -1,11 +1,12 @@
 .reasons__header {
   max-width: 280px;
   margin: auto;
-  margin-bottom: 30px;
+  padding-bottom: 11px;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
   font-weight: normal;
+
 }
 
 .reasons__list {
@@ -26,7 +27,14 @@
 }
 
 .reasons__item--blue:first-child {
-  padding-top: 60px;
+  background-image: url("../img/bg-triangle.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.reasons__item--blue:first-child {
+  padding-top: 82px;
 }
 
 .reasons__item--white {
@@ -78,6 +86,7 @@
 
 .reasons__image {
   margin-top: 42px;
+  width: 100%;
   vertical-align: bottom;
 }
 
@@ -112,6 +121,7 @@
 
   .reasons__item--blue:first-child {
     padding-top: 0;
+    background-image: none;
   }
 
   .reasons__image {
@@ -138,10 +148,15 @@
     display: flex;
     justify-content: space-between;
     background: #eeeeee;
+    padding: 0 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .reasons__header {
+    padding-bottom: 57px;
+  }
+
   .reasons__item-header {
     margin-left: 58px;
     margin-right: 58px;
