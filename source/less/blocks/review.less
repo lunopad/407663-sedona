@@ -52,7 +52,7 @@
 }
 
 .review__section--impression p {
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .review__label {
@@ -68,20 +68,84 @@
   text-align: left;
 }
 
+.review__radio-input {
+  display: none;
+}
+
 .review__label--impression {
-  margin-left: 25px;
+  padding-left: 79px;
+  line-height: 56px;
   font-size: 18px;
-  line-height: 26px;
   font-weight: bold;
   text-transform: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.review__label--impression::before {
+  content: "";
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  vertical-align: top;
+  border-radius: 28px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.review__radio-input:checked + .review__label--impression::after {
+ content: "";
+ display: inline-block;
+ width: 22px;
+ height: 22px;
+ vertical-align: top;
+ border-radius: 11px;
+ background-color: #333333;
+ position: absolute;
+ top: 17px;
+ left: 17px;
+}
+
+.review__checkbox-input {
+  display: none;
 }
 
 .review__label--sites {
-  margin-left: 25px;
+  padding-left: 79px;
+  line-height: 56px;
   font-size: 18px;
-  line-height: 26px;
   font-weight: bold;
   text-transform: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.review__label--sites::before {
+  content: "";
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.review__checkbox-input:checked + .review__label--sites::after {
+ content: "";
+ display: inline-block;
+ width: 23px;
+ height: 16px;
+ vertical-align: top;
+ background-image: url("../img/icon-tick.svg");
+ background-repeat: no-repeat;
+ position: absolute;
+ top: 19px;
+ left: 18px;
 }
 
 .review__input {
@@ -113,14 +177,6 @@
 .review__image {
   display: block;
   padding: 19px;
-}
-
-.review__radio-block input {
-  width: 55px;
-}
-
-.review__checkbox-block input {
-  width: 55px;
 }
 
 .review__textarea {
@@ -159,6 +215,17 @@
     border: 0;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 62px;
+  }
+
+  .review__header {
+    font-size: 21px;
+    text-align: left;
+    margin-bottom: 60px;
+  }
+
+  .review__section--name {
+    padding-left: 58px;
   }
 
   .review__section--impression {
@@ -166,37 +233,79 @@
   }
 
   .review__section--contact {
+    padding-top: 45px;
     width: 100%;
+  }
+
+  .review__header--contact {
+    margin-bottom: 32px;
+    text-align: center;
   }
 
   .review__section--sites {
     width: 100%;
     padding-left: 94px;
     padding-right: 94px;
+    padding-top: 27px;
   }
 
-  .review__section--emotions {
-    width: 100%;
+  .review__header--sites {
+    margin-bottom: 40px;
+    text-align: center;
   }
 
   .review__checkbox-block {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .review__checkbox-block p {
+    width: 204px;
+  }
+
+  .review__section--emotions {
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 58px;
+  }
+
+  .review__header--emotions {
+    margin-bottom: 58px;
+    text-align: center;
   }
 
   .review__button {
     width: 324px;
     margin-left: 0;
+    margin-bottom: 61px;
   }
 
   .review__notice {
     display: block;
+    margin: auto 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .review {
+    padding: 0 120px;
+  }
+
   .review__header {
     font-size: 21px;
+  }
+
+  .review__section--name {
+    padding-left: 80px;
+  }
+
+  .review__header--contact {
+    margin-bottom: 66px;
+  }
+
+  .review__section--contact {
+    padding-bottom: 37px;
   }
 
   .review__label-word {
@@ -208,7 +317,8 @@
   }
 
   .review__label--contact {
-    margin-right: 18px;
+    margin-left: 0;
+    margin-right: 16px;
   }
 
   .review__label--email {
@@ -221,6 +331,15 @@
 
   .review__checkbox-block {
     justify-content: space-between;
+  }
+
+  .review__checkbox-block p {
+    width: auto;
+    margin-top: 4px;
+  }
+
+  .review__section--emotions {
+    padding-top: 70px;
   }
 
   .review__button {

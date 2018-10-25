@@ -33,7 +33,7 @@
         <p class="main-title__desc">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
         <form class="review" method="post" name="review" action="https://echo.htmlacademy.ru">
-          <div class="review__section">
+          <div class="review__section review__section--name">
             <h2 class="review__header">Представьтесь:</h2>
             <p>
               <label class="review__label" for="first-name">Имя*:</label>
@@ -68,19 +68,19 @@
           <div class="review__section review__section--impression">
             <h2 class="review__header review__header--impression">Ваше общее впечатление:</h2>
             <div class="review__radio-block">
-              <p><input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label></p>
-              <p><input id="negative" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label></p>
-              <p><input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label></p>
+              <p><input id="positive" class="review__radio-input" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label></p>
+              <p><input id="negative" class="review__radio-input" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label></p>
+              <p><input id="nothing" class="review__radio-input" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label></p>
             </div>
           </div>
 
           <div class="review__section  review__section--sites">
-            <h2 class="review__header review__header--sites">Посещенные достопримечательности:</h2>
+            <h2 class="review__header review__header--sites">Посещенные <br>достопримечательности:</h2>
             <div class="review__checkbox-block">
-              <p><input id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label></p>
-              <p><input id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label></p>
-              <p><input id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label></p>
-              <p><input id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label></p>
+              <p><input class="review__checkbox-input" id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label></p>
+              <p><input class="review__checkbox-input" id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label></p>
+              <p><input class="review__checkbox-input" id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label></p>
+              <p><input class="review__checkbox-input" id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label></p>
             </div>
           </div>
 
