@@ -1,3 +1,34 @@
 .intro-main {
   display: block;
+  height: 389px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: center bottom, center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 56px;
+  background-color: #3b5257;
+}
+
+.intro-main__text {
+  padding-top: 90px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro-main {
+    margin-top: 0;
+    height: 520px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .intro-main__text {
+    width: 462px;
+    padding-top: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro-main {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-size: auto, cover;
+  }
 }

@@ -10,24 +10,20 @@
   <body>
     <div class="site-wrapper">
       <header class="page-header">
-        <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--cross">Закрыть меню</button>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
-            <li class="main-nav__item"><a class="main-nav__link">Форма отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Форма отзыва</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-            <li class="main-nav__logo">
-              <a class="page-header__logo" href="index.html">
-                <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
-              </a>
-            </li>
           </ul>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
+          </a>
         </nav>
-
         <div class="intro-inner">
-          <img class="intro-inner__background-image" src="img/bg-back-mobile@1x.jpg" width="320" height="158" alt="Sedona">
+
           <img class="intro-inner__text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
         </div>
       </header>
@@ -37,7 +33,7 @@
         <p class="main-title__desc">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
         <form class="review" method="post" name="review" action="https://echo.htmlacademy.ru">
-          <div class="review__section">
+          <div class="review__section review__section--name">
             <h2 class="review__header">Представьтесь:</h2>
             <p>
               <label class="review__label" for="first-name">Имя*:</label>
@@ -72,19 +68,19 @@
           <div class="review__section review__section--impression">
             <h2 class="review__header review__header--impression">Ваше общее впечатление:</h2>
             <div class="review__radio-block">
-              <p><input id="positive" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label></p>
-              <p><input id="negative" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label></p>
-              <p><input id="nothing" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label></p>
+              <p><input id="positive" class="review__radio-input" type="radio" name="impression" value="positive" checked> <label class="review__label review__label--impression" for="positive">Скорее положительное</label></p>
+              <p><input id="negative" class="review__radio-input" type="radio" name="impression" value="negative"> <label class="review__label review__label--impression" for="negative">Скорее отрицательное</label></p>
+              <p><input id="nothing" class="review__radio-input" type="radio" name="impression" value="nothing"> <label class="review__label review__label--impression" for="nothing">Затрудняюсь ответить</label></p>
             </div>
           </div>
 
           <div class="review__section  review__section--sites">
-            <h2 class="review__header review__header--sites">Посещенные достопримечательности:</h2>
+            <h2 class="review__header review__header--sites">Посещенные <br>достопримечательности:</h2>
             <div class="review__checkbox-block">
-              <p><input id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label></p>
-              <p><input id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label></p>
-              <p><input id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label></p>
-              <p><input id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label></p>
+              <p><input class="review__checkbox-input" id="bridge" type="checkbox" name="sites" value="bridge" checked> <label class="review__label review__label--sites" for="bridge">Мост Дьявола</label></p>
+              <p><input class="review__checkbox-input" id="mount" type="checkbox" name="sites" value="mount" checked> <label class="review__label review__label--sites" for="mount">Гора-Колокол</label></p>
+              <p><input class="review__checkbox-input" id="park" type="checkbox" name="sites" value="park" checked> <label class="review__label review__label--sites" for="park">Слайд-Парк</label></p>
+              <p><input class="review__checkbox-input" id="rocks" type="checkbox" name="sites" value="rocks"> <label class="review__label review__label--sites" for="rocks">Красные Скалы</label></p>
             </div>
           </div>
 
@@ -104,22 +100,38 @@
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Твиттер</a>
+                <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--fb" href="https://facebook.com/htmlacademy">Фейсбук</a>
+                <a class="social__link social__link--fb" href="https://facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="https://youtube.com/htmlacademy">Ютуб</a>
+                <a class="social__link social__link--youtube" href="https://youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span></a>
               </li>
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
           </div>
         </div>
       </footer>
     </div>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

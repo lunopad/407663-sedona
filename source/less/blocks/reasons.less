@@ -1,7 +1,7 @@
 .reasons__header {
   max-width: 280px;
   margin: auto;
-  margin-bottom: 30px;
+  padding-bottom: 11px;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
@@ -26,7 +26,11 @@
 }
 
 .reasons__item--blue:first-child {
-  padding-top: 60px;
+  background-image: url("../img/bg-triangle.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 82px;
 }
 
 .reasons__item--white {
@@ -57,13 +61,16 @@
 }
 
 .reasons__item-desc {
+  width: 280px;
+  margin: auto;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 0;
 }
 
 .reasons__item--white .reasons__item-desc {
-  margin: 0 20px;
+  width: 252px;
+  margin: 0 auto;
   border-bottom: 1px solid #d6d6d6;
   padding-bottom: 30px;
   color: #333333;
@@ -75,6 +82,7 @@
 
 .reasons__image {
   margin-top: 42px;
+  width: 100%;
   vertical-align: bottom;
 }
 
@@ -84,8 +92,18 @@
   }
 
   .reasons__item-header {
+    width: 156px;
     padding-top: 47px;
     font-size: 21px;
+  }
+
+  .reasons__item-desc {
+    width: 170px;
+  }
+
+  .reasons__item--white .reasons__item-desc {
+    width: 161px;
+    border: 0;
   }
 
   .reasons__item--blue {
@@ -99,6 +117,7 @@
 
   .reasons__item--blue:first-child {
     padding-top: 0;
+    background-image: none;
   }
 
   .reasons__image {
@@ -120,18 +139,20 @@
     order: 2;
   }
 
+
   .reasons__items-block {
     display: flex;
     justify-content: space-between;
     background: #eeeeee;
-  }
-
-  .reasons__item--white .reasons__item-desc {
-    border: 0;
+    padding: 0 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .reasons__header {
+    padding-bottom: 57px;
+  }
+
   .reasons__item-header {
     margin-left: 58px;
     margin-right: 58px;
@@ -140,6 +161,18 @@
   .reasons__item-header--bridge {
     margin-left: 32px;
     margin-right: 32px;
+  }
+
+  .reasons__item-desc {
+    width: 290px;
+  }
+
+  .reasons__image-desc--bridge .reasons__item-desc {
+    width: 218px;
+  }
+
+  .reasons__item--white .reasons__item-desc {
+    width: 290px;
   }
 
   .reasons__image-desc {

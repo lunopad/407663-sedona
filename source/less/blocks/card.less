@@ -38,10 +38,24 @@
 
 .card__likes {
   padding-top: 10px;
+  padding-left: 37px;
   text-align: left;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  position: relative;
+}
+
+.card__likes::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  vertical-align: top;
+  background-image: url("../img/icon-like.svg");
+  position: absolute;
+  top: 10px;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -50,13 +64,33 @@
     border: 0;
   }
 
+  .card__wrapper {
+    padding: 0;
+  }
+
+  .card__image {
+    width: 100%;
+  }
+
   .card__desc {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
     padding-left: 20px;
+    box-sizing: border-box;
     background: #f2f2f2;
+  }
+
+  .card__likes {
+    padding-left: 32px;
+    padding-top: 28px;
+    margin-right: 21px;
+  }
+
+  .card__likes::before {
+    top: 28px;
   }
 
   .card:first-child {
@@ -69,22 +103,21 @@
     padding: 0;
     padding-bottom: 10px;
   }
-
-  .card__likes {
-    padding-top: 28px;
-    margin-right: 21px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .card {
-    width: auto;
+    width: 400px;
+  }
+
+  .card__wrapper {
+    position: relative;
   }
 
   .card__desc {
-    margin-top: -80px;
     color: #ffffff;
     background: rgba(0, 0, 0, 0.3);
-    position: relative;
+    position: absolute;
+    bottom: 0;
   }
 }

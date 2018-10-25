@@ -2,3 +2,22 @@
   background: #ffffff;
   text-align: center;
 }
+
+.page-header__logo {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .page-header__logo {
+    margin-top: -56px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    top: 0;
+  }
+}
