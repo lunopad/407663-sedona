@@ -41,11 +41,11 @@
             <h2 class="review__header">Представьтесь:</h2>
             <p>
               <label class="review__label" for="first-name">Имя*:</label>
-              <input class="review__input" id="first-name" name="first-name" type="text" value="" placeholder="Петр">
+              <input class="review__input" id="first-name" name="first-name" type="text" value="" placeholder="Петр" required>
             </p>
             <p>
               <label class="review__label" for="last-name">Фамилия*:</label>
-              <input class="review__input" id="last-name" name="last-name" type="text" value="" placeholder="Иванов">
+              <input class="review__input" id="last-name" name="last-name" type="text" value="" placeholder="Иванов" required>
             </p>
             <p>
               <label class="review__label" for="second-name">Отчество:</label>
@@ -58,12 +58,13 @@
             <div class="review__contact-block">
               <label class="review__label review__label--contact" for="phone"><span class="review__label-word">Контактный</span> телефон*:</label>
               <p>
-                <input class="review__input review__input--contact" id="phone" name="phone" type="tel" value="" placeholder="Введите телефон">
+                <input class="review__input review__input--contact" id="phone" name="phone" type="tel" pattern="[0-9]{10}"
+           required value="" placeholder="Введите телефон">
                 <span class="review__image-wrap"><img class="review__image" src="img/icon-phone.svg" width="20" height="20" alt="Телефон"></span>
               </p>
               <label class="review__label review__label--contact review__label--email" for="email">Электронная почта*:</label>
               <p>
-                <input class="review__input review__input--contact" id="email" name="email" type="email" value="" placeholder="Введите e-mail">
+                <input class="review__input review__input--contact" id="email" name="email" type="email" value="" placeholder="Введите e-mail" required>
                 <span class="review__image-wrap"><img class="review__image" src="img/icon-mail.svg" width="20" height="20" alt="E-mail"></span>
               </p>
             </div>
