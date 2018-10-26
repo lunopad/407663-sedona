@@ -83,12 +83,13 @@
 .reasons__image {
   margin-top: 42px;
   width: 100%;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 @media (min-width: @tablet-width) {
   .reasons__header {
     max-width: none;
+    padding-bottom: 54px;
   }
 
   .reasons__item-header {
@@ -127,6 +128,8 @@
   .reasons__image-block {
     display: flex;
     justify-content: space-between;
+    max-height: 256px;
+    overflow: hidden;
   }
 
   .reasons__image-desc {
@@ -173,6 +176,7 @@
 
   .reasons__item--white .reasons__item-desc {
     width: 290px;
+    padding-bottom: 68px;
   }
 
   .reasons__image-desc {
