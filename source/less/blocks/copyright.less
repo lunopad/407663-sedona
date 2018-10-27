@@ -1,18 +1,20 @@
 .copyright__text {
   font-size: 14px;
   line-height: 26px;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .copyright__link {
-  position: relative;
+  display: block;
 }
 
-.copyright__link::before {
-  content: "";
-  position: absolute;
-  width: 46px;
-  height: 48px;
-  margin-left: 11px;
-  background-repeat: no-repeat;
-  background-image: url("../img/logo-htmlacademy.svg");
+.copyright__icon {
+  &:hover {
+    fill: @color-blue;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
 }
