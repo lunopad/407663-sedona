@@ -244,6 +244,33 @@
   color: #333333;
 }
 
+.review__button {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(256, 256, 256, 0.3);
+  }
+
+  &:disabled {
+    cursor: auto;
+    background-color: #e5e5e5;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active {
+      background-color: #e5e5e5;
+      color: #ffffff;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .review {
     display: flex;
